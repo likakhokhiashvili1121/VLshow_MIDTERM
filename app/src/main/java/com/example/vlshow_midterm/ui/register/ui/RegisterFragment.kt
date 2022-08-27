@@ -49,19 +49,19 @@ class RegisterFragment : Fragment() {
         dialog.setContentView(R.layout.loading_bar)
         dialog.show()
         viewModel.register(userName,email, password)
-        viewModel.responseLiveData.observe(viewLifecycleOwner, {
+        viewModel.responseLiveData.observe(viewLifecycleOwner) {
             Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
             dialog.cancel()
-            if(it == "Successful"){
+            if (it == "Successful") {
                 val sharedPreferences: SharedPreferences =
                     context?.getSharedPreferences("ShowTimeAuth", Context.MODE_PRIVATE)!!
-                val editor: SharedPreferences.Editor =  sharedPreferences.edit()
-                editor.putBoolean("login",true)
+                val editor: SharedPreferences.Editor = sharedPreferences.edit()
+                editor.putBoolean("login", true)
                 editor.apply()
                 editor.commit()
                 findNavController().popBackStack()
             }
-        })
+        }
     }
     private fun validation(name: String, mail: String, pass: String): Boolean {
         var valid = true

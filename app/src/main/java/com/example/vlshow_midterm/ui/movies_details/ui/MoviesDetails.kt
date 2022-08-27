@@ -113,23 +113,23 @@ class MoviesDetails : Fragment() {
             }
         }
 
-        moviesDetailsViewModel.trailerId.observe(viewLifecycleOwner, {
+        moviesDetailsViewModel.trailerId.observe(viewLifecycleOwner) {
             trailerId = it?.key ?: ""
-        })
+        }
 
-        moviesDetailsViewModel.listCastMovie.observe(viewLifecycleOwner, {
+        moviesDetailsViewModel.listCastMovie.observe(viewLifecycleOwner) {
             castAdapter.setCast(it)
-        })
+        }
 
-        moviesDetailsViewModel.favorite.observe(viewLifecycleOwner, {
+        moviesDetailsViewModel.favorite.observe(viewLifecycleOwner) {
             favorite = it
             if (it)
                 binding.favoriteIcon.setImageResource(R.drawable.ic_favorite_choosed)
             else
                 binding.favoriteIcon.setImageResource(R.drawable.ic_favorite)
-        })
+        }
 
-        moviesDetailsViewModel.movieDetails.observe(viewLifecycleOwner, {
+        moviesDetailsViewModel.movieDetails.observe(viewLifecycleOwner) {
             binding.movieName.text = it?.title
             binding.overviewText.text = it?.overview
             var isTextViewClicked = true
@@ -163,7 +163,7 @@ class MoviesDetails : Fragment() {
             val minutes: Int = time % 60
             binding.movieTime.text = "$hours H $minutes Min"
             binding.rateText.text = it?.voteAverage.toString()
-        })
+        }
 //        ViewCompat.setTransitionName(binding.moviePosterImage, "${type}Image$position")
 //        ViewCompat.setTransitionName(binding.movieName, "${type}Text$position")
 

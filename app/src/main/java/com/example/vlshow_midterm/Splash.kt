@@ -3,7 +3,7 @@ package com.example.vlshow_midterm
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.hamdy.vlshow_midterm.ui.ui.MainActivity
+import com.example.vlshow_midterm.ui.MainActivity
 
 class Splash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

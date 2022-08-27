@@ -83,11 +83,11 @@ dependencies {
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
 
     // SpinKit Loading
-    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //implementation 'com.github.ybq:Android-SpinKit:1.4.0'
     // Enable Multidex
     implementation 'com.android.support:multidex:1.0.3'
     // Youtube Extractor
-    implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
+   // implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
     // Exoplayer
     implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
     implementation 'com.google.android.exoplayer:exoplayer-core:2.18.1'
@@ -97,4 +97,5 @@ dependencies {
     implementation 'com.github.sparrow007:carouselrecyclerview:1.2.1'
     // Animation ImageView
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
+
 }

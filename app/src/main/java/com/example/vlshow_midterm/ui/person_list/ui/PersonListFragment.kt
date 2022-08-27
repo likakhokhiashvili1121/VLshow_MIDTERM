@@ -50,7 +50,7 @@ class PersonListFragment : Fragment() {
 
         viewModel.listPersons.observe(viewLifecycleOwner) {
             adapter.setPopular(it)
-            binding.loadingMoreProgressBar.visibility = View.GONE
+            //binding.loadingMoreProgressBar.visibility = View.GONE
             canGetPopular = true
         }
         viewModel.listFavoritePersons.observe(viewLifecycleOwner) {
@@ -72,7 +72,7 @@ class PersonListFragment : Fragment() {
                 if (!recyclerView.canScrollVertically(1)) { //1 for down
                     if (canGetPopular) {
                         viewModel.getPopular()
-                        binding.loadingMoreProgressBar.visibility = View.VISIBLE
+                       // binding.loadingMoreProgressBar.visibility = View.VISIBLE
                         canGetPopular = false
                     }
                 }

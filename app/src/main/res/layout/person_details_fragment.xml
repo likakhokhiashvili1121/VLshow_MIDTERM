@@ -99,7 +99,6 @@
                 android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_marginRight="@dimen/_16sdp"
                 app:layout_collapseMode="pin"
-
                 app:srcCompat="@drawable/ic_favorite"
                 tools:ignore="VectorDrawableCompat" />
 

@@ -49,14 +49,14 @@ class SearchMoviesFragment : Fragment() {
         snapHelper.attachToRecyclerView(binding.searchMoviesRecyclerView)
         val searchAdapter = SearchMoviesAdapter()
         binding.searchMoviesRecyclerView.adapter = searchAdapter
-        viewModel.listSearchMovie.observe(viewLifecycleOwner, {
+        viewModel.listSearchMovie.observe(viewLifecycleOwner) {
             arr = it
             if (arr.isNotEmpty())
                 setBackgroundImage(position)
-            if(dialog.isShowing)
+            if (dialog.isShowing)
                 dialog.cancel()
             searchAdapter.setQuery(it, R.id.action_searchFragment_to_moviesDetails)
-        })
+        }
         binding.searchMoviesRecyclerView.addOnScrollListener(object :
             RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
@@ -71,7 +71,7 @@ class SearchMoviesFragment : Fragment() {
             }
         })
 
-        sharedViewModel.searchQuery.observe(viewLifecycleOwner) {
+      /*  sharedViewModel.searchQuery.observe(viewLifecycleOwner) {
             val parent = this.parentFragment
             if (it.second == 0 && firstOpen) {
                 val query = it.first
@@ -83,7 +83,7 @@ class SearchMoviesFragment : Fragment() {
                 }
                 Log.d("lol", "onActivityCreated: $query")
             }
-        }
+        }*/
 
     }
 

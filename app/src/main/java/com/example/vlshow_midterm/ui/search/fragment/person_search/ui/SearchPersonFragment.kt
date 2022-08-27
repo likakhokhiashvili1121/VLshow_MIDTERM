@@ -52,14 +52,14 @@ class SearchPersonFragment : Fragment() {
         snapHelper.attachToRecyclerView(binding.searchPersonsRecyclerView)
         val searchAdapter = SearchPersonAdapter()
         binding.searchPersonsRecyclerView.adapter = searchAdapter
-        viewModel.listSearchPerson.observe(viewLifecycleOwner, {
+        viewModel.listSearchPerson.observe(viewLifecycleOwner) {
             arr = it
             if (arr.isNotEmpty())
                 setBackgroundImage(position)
-            if(dialog.isShowing)
+            if (dialog.isShowing)
                 dialog.cancel()
             searchAdapter.setQuery(it, R.id.action_searchFragment_to_navigation_person)
-        })
+        }
         binding.searchPersonsRecyclerView.addOnScrollListener(object :
             RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
@@ -72,7 +72,7 @@ class SearchPersonFragment : Fragment() {
             }
         })
 
-        sharedViewModel.searchQuery.observe(viewLifecycleOwner) {
+      /*  sharedViewModel.searchQuery.observe(viewLifecycleOwner) {
             val parent = this.parentFragment
             if (it.second == 1 && firstOpen) {
                 val query = it.first
@@ -86,7 +86,7 @@ class SearchPersonFragment : Fragment() {
                 }
                 Log.d("lol", "onActivityCreated: $query")
             }
-        }
+        } */
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

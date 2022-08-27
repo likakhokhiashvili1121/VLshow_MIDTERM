@@ -96,7 +96,7 @@ class PersonDetailsFragment : Fragment(), AppBarLayout.OnOffsetChangedListener {
         val container = binding.bottomSheetContainer
         val personPhotosAdapter = PersonPhotosAdapter()
         container.photoRecyclerView.adapter = personPhotosAdapter
-        viewModel.favorite.observe(viewLifecycleOwner, {
+        viewModel.favorite.observe(viewLifecycleOwner) {
             favorite = it
             if (it)
                 binding.favoriteImage.setImageResource(R.drawable.ic_favorite_choosed)
@@ -107,9 +107,9 @@ class PersonDetailsFragment : Fragment(), AppBarLayout.OnOffsetChangedListener {
                 personId.toString() to it
             )
 
-        })
+        }
 
-        viewModel.personDetails.observe(viewLifecycleOwner, {
+        viewModel.personDetails.observe(viewLifecycleOwner) {
             container.overviewText.text = it.biography
             var isTextViewClicked = true
             if (container.overviewText.lineCount > 4) {
@@ -133,15 +133,15 @@ class PersonDetailsFragment : Fragment(), AppBarLayout.OnOffsetChangedListener {
             if (name?.size ?: 0 > 1)
                 binding.castNickName.text = name?.get(1) ?: ""
 
-        })
+        }
 
-        viewModel.listPersons.observe(viewLifecycleOwner, {
+        viewModel.listPersons.observe(viewLifecycleOwner) {
             personPhotosAdapter.setPerson(it)
-        })
+        }
 
-        viewModel.listKnown.observe(viewLifecycleOwner, {
+        viewModel.listKnown.observe(viewLifecycleOwner) {
             knownMoviesAdapter.setMovies(it)
-        })
+        }
     }
 
 

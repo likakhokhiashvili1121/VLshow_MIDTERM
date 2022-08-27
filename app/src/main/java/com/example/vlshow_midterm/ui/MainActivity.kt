@@ -1,4 +1,4 @@
-package com.hamdy.vlshow_midterm.ui.ui
+package com.example.vlshow_midterm.ui
 
 import android.os.Build
 import android.os.Bundle

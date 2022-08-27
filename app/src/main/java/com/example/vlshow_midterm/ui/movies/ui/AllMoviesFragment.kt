@@ -53,7 +53,7 @@ class AllMoviesFragment : Fragment() {
 
         allMoviesViewModel.listMovies.observe(viewLifecycleOwner, {
             adapter.setMoviesData(it, R.id.action_fragment_all_movies_to_moviesDetails)
-            binding.loadingMoreProgressBar.visibility = View.GONE
+            //binding.loadingMoreProgressBar.visibility = View.GONE
             canGetPopular = true
         })
 
@@ -74,7 +74,7 @@ class AllMoviesFragment : Fragment() {
                                 allMoviesViewModel.getUpComing()
                             }
                         }
-                        binding.loadingMoreProgressBar.visibility = View.VISIBLE
+                        //binding.loadingMoreProgressBar.visibility = View.VISIBLE
                         canGetPopular = false
                     }
                 }

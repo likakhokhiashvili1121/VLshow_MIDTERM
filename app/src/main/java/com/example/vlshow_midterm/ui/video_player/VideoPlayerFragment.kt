@@ -15,7 +15,7 @@ import com.google.android.exoplayer2.source.MergingMediaSource
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
 import com.google.android.exoplayer2.util.Util
-import com.hamdy.vlshow_midterm.ui.ui.MainActivity
+import com.example.vlshow_midterm.ui.MainActivity
 import com.example.vlshow_midterm.util.YouTubeBase
 
 
@@ -44,11 +44,11 @@ class VideoPlayerFragment : Fragment(), Player.Listener {
 
         }
 
-        initializePlayer()
+        //initializePlayer()
 
     }
 
-    private fun initializePlayer() {
+  /*  private fun initializePlayer() {
         player = ExoPlayer.Builder(requireContext()).build()
         binding.videoView.player = player
 
@@ -102,13 +102,13 @@ class VideoPlayerFragment : Fragment(), Player.Listener {
         } else {
             binding.progressBar.visibility = View.VISIBLE
         }
-    }
+    } */
 
 
     override fun onStart() {
         super.onStart()
         if (Util.SDK_INT >= 24 || player == null) {
-            initializePlayer()
+           // initializePlayer()
 
         }
     }
@@ -116,7 +116,7 @@ class VideoPlayerFragment : Fragment(), Player.Listener {
     override fun onResume() {
         super.onResume()
         if (Util.SDK_INT < 24 || player == null) {
-            initializePlayer()
+           // initializePlayer()
 
         }
     }
