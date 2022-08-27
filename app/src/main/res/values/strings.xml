@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">VLshow_MIDTERM</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_search">Search</string>
+    <string name="person">Person</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="see_all">See All</string>
+    <string name="biography">Biography</string>
+    <string name="leo">Leonardo DiCaprio (born November 11, 1974) is an American actor, film producer, and environmental activist. He began his film career by starring as Josh in Critters 3 before starring in the film adaptation of the memoir This Boy\'s Life (1993) alongside Robert De Niro. DiCaprio was praised for his supporting role in the drama What\'s Eating Gilbert Grape (1993), and gained public recognition with leading roles in the drama The Basketball Diaries (1995) and the romantic drama Romeo + Juliet (1996), before achieving international fame with James Cameron\'s epic romance Titanic (1997) He has been nominated for six Academy Awards—five for acting and one for producing—and in 2016, he won the Academy Award for Best Actor for The Revenant. DiCaprio is the founder of his own production company, named Appian Way Productions. He is also a committed environmentalist.</string>
+    <string name="born">Born</string>
+
 </resources>

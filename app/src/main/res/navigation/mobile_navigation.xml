@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.hamdy.showtime.ui.ui.home.ui.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_fragment_all_movies"
+            app:destination="@id/fragment_all_movies"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_navigation_home_to_moviesDetails"
+            app:destination="@id/moviesDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_person"
+        android:name="com.hamdy.showtime.ui.ui.person_details.ui.PersonDetailsFragment"
+        tools:layout="@layout/person_details_fragment" >
+        <action
+            android:id="@+id/action_navigation_person_to_moviesDetails"
+            app:destination="@id/moviesDetails" />
+        <action
+            android:id="@+id/action_navigation_person_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/navigation_person" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.hamdy.showtime.ui.ui.favorite.ui.FavoriteFragment"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_navigation_favorite_to_navigation_person"
+            app:destination="@id/navigation_person" />
+        <action
+            android:id="@+id/action_navigation_favorite_to_moviesDetails"
+            app:destination="@id/moviesDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_all_movies"
+        android:name="com.hamdy.showtime.ui.ui.movies.ui.AllMoviesFragment"
+        android:label="fragment_all_movies"
+        tools:layout="@layout/fragment_all_movies" >
+        <argument
+            android:name="playListType"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragment_all_movies_to_moviesDetails"
+            app:destination="@id/moviesDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviesDetails"
+        android:name="com.hamdy.showtime.ui.ui.movies_details.ui.MoviesDetails"
+        android:label="fragment_movies_details"
+        tools:layout="@layout/fragment_movies_details" >
+        <action
+            android:id="@+id/action_moviesDetails_to_navigation_person"
+            app:destination="@id/navigation_person" />
+        <action
+            android:id="@+id/action_moviesDetails_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_moviesDetails_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personListFragment"
+        android:name="com.hamdy.showtime.ui.ui.person_list.ui.PersonListFragment"
+        android:label="person_list_fragment"
+        tools:layout="@layout/person_list_fragment" >
+        <action
+            android:id="@+id/action_personListFragment_to_navigation_person"
+            app:destination="@id/navigation_person" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.hamdy.showtime.ui.ui.login.ui.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.hamdy.showtime.ui.ui.register.ui.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" >
+        <action
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.hamdy.showtime.ui.ui.search.ui.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_moviesDetails"
+            app:destination="@id/moviesDetails" />
+        <action
+            android:id="@+id/action_searchFragment_to_navigation_person"
+            app:destination="@id/navigation_person" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.hamdy.showtime.ui.ui.video_player.VideoPlayerFragment"
+        android:label="video_fragment"
+        tools:layout="@layout/fragment_video_player" >
+    </fragment>
+</navigation>
