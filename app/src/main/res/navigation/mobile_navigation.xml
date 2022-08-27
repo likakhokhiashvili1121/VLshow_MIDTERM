@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.hamdy.showtime.ui.ui.home.ui.HomeFragment"
+        android:name="com.example.vlshow_midterm.ui.home.ui.HomeFragment"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_navigation_home_to_fragment_all_movies"
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/navigation_person"
-        android:name="com.hamdy.showtime.ui.ui.person_details.ui.PersonDetailsFragment"
+        android:name="com.example.vlshow_midterm.ui.person_details.ui.PersonDetailsFragment"
         tools:layout="@layout/person_details_fragment" >
         <action
             android:id="@+id/action_navigation_person_to_moviesDetails"
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/navigation_favorite"
-        android:name="com.hamdy.showtime.ui.ui.favorite.ui.FavoriteFragment"
+        android:name="com.example.vlshow_midterm.ui.favorite.ui.FavoriteFragment"
         tools:layout="@layout/fragment_favorite" >
         <action
             android:id="@+id/action_navigation_favorite_to_navigation_person"
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_all_movies"
-        android:name="com.hamdy.showtime.ui.ui.movies.ui.AllMoviesFragment"
+        android:name="com.example.vlshow_midterm.ui.movies.ui.AllMoviesFragment"
         android:label="fragment_all_movies"
         tools:layout="@layout/fragment_all_movies" >
         <argument
@@ -59,7 +59,7 @@
     </fragment>
     <fragment
         android:id="@+id/moviesDetails"
-        android:name="com.hamdy.showtime.ui.ui.movies_details.ui.MoviesDetails"
+        android:name="com.example.vlshow_midterm.ui.movies_details.ui.MoviesDetails"
         android:label="fragment_movies_details"
         tools:layout="@layout/fragment_movies_details" >
         <action
@@ -74,7 +74,7 @@
     </fragment>
     <fragment
         android:id="@+id/personListFragment"
-        android:name="com.hamdy.showtime.ui.ui.person_list.ui.PersonListFragment"
+        android:name="com.example.vlshow_midterm.ui.person_list.ui.PersonListFragment"
         android:label="person_list_fragment"
         tools:layout="@layout/person_list_fragment" >
         <action
@@ -83,7 +83,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.hamdy.showtime.ui.ui.login.ui.LoginFragment"
+        android:name="com.example.vlshow_midterm.ui.login.ui.LoginFragment"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" >
         <action
@@ -94,7 +94,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.hamdy.showtime.ui.ui.register.ui.RegisterFragment"
+        android:name="com.example.vlshow_midterm.ui.register.ui.RegisterFragment"
         android:label="register_fragment"
         tools:layout="@layout/register_fragment" >
         <action
@@ -105,7 +105,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.hamdy.showtime.ui.ui.search.ui.SearchFragment"
+        android:name="com.example.vlshow_midterm.ui.search.ui.SearchFragment"
         android:label="search_fragment"
         tools:layout="@layout/search_fragment" >
         <action
@@ -118,7 +118,7 @@
 
     <fragment
         android:id="@+id/videoPlayerFragment"
-        android:name="com.hamdy.showtime.ui.ui.video_player.VideoPlayerFragment"
+        android:name="com.example.vlshow_midterm.ui.video_player.VideoPlayerFragment"
         android:label="video_fragment"
         tools:layout="@layout/fragment_video_player" >
     </fragment>
