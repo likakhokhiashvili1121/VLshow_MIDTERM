@@ -28,7 +28,6 @@ Yes, ofcourse <3
 
 - [@likakhokhiashvili](https://github.com/likakhokhiashvili1121)
 
-- [@vatoriadze](https://github.com/TheStab)
 
 
 ## Features
