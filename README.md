@@ -28,11 +28,7 @@ Yes, ofcourse <3
 
 - [@likakhokhiashvili](https://github.com/likakhokhiashvili1121)
 
-
-
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+- [@vatoriadze](https://github.com/TheStab)
 
 
 ## Features
